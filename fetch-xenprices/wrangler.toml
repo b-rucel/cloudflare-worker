@@ -1,0 +1,3 @@
+name = "fetch-xenprices"
+main = "src/index.js"
+compatibility_date = "2023-05-15"
