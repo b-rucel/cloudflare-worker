@@ -85,6 +85,8 @@ export default {
 
     const response = new Response(JSON.stringify(group_one_results.concat(group_two_results)), options);
     response.headers.set("Cache-Control", "max-age=30");
+    response.headers.set('Access-Control-Allow-Origin', '*')
+ 
     return response;
   },
 };
