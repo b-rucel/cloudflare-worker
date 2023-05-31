@@ -83,7 +83,7 @@ export default {
       parseResponse(group_two_responses[4]),
     ])
 
-    const response = new Response(JSON.stringify(group_one_results.concat(group_two_results)), options);
+    const response = new Response(JSON.stringify(group_one_results.concat(group_two_results).reduce((acc, curr) => { return {...acc, ...curr} }, {})), options);
     response.headers.set("Cache-Control", "max-age=30");
     response.headers.set('Access-Control-Allow-Origin', '*')
  
